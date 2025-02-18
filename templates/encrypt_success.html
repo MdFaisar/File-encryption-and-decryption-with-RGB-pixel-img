@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encryption Success</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Encryption Successful</h1>
+        <p>Your file has been encrypted successfully.</p>
+        <div class="result-container">
+            <img src="{{ url_for('static', filename='enimg/' + filename) }}" alt="Encrypted Image" class="result-image">
+            <p>File name: {{ filename }}</p>
+        </div>
+        <div class="action-buttons">
+            <a href="{{ url_for('encrypt') }}" class="btn">Encrypt Another File</a>
+            <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

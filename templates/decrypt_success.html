@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decryption Success</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Decryption Successful</h1>
+        <p>Your file has been decrypted successfully.</p>
+        <div class="result-container">
+            <h3>Decrypted Content:</h3>
+            <div class="result-content">{{ content | safe }}</div>
+            <p>File name: {{ filename }}</p>
+        </div>
+        <div class="action-buttons">
+            <a href="{{ url_for('decrypt') }}" class="btn">Decrypt Another File</a>
+            <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

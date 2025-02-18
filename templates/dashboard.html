@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ username }}!</h1>
+        <div class="action-buttons">
+            <a href="{{ url_for('encrypt') }}" class="btn">Encrypt</a>
+            <a href="{{ url_for('decrypt') }}" class="btn">Decrypt</a>
+            <a href="{{ url_for('logout') }}" class="btn btn-logout">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
